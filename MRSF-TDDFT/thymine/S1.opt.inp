@@ -1,0 +1,24 @@
+#
+# Geometry Optimization of First Excited State Thymine with MRSF-TDDFT/BHHLYP/6-31G*
+#
+[input]
+system=thymine.xyz
+runtype=optimize
+method=tdhf
+functional=bhhlyp
+basis=6-31g(d)
+
+[guess]
+save_mol=true
+
+[scf]
+type=rohf
+multiplicity=3
+
+[optimize]
+istate=2
+
+[tdhf]
+type=mrsf
+nstate=5
+

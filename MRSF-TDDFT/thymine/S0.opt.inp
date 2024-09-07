@@ -1,0 +1,25 @@
+#
+# Geometry Optimization of Ground State Thymine with MRSF-TDDFT/BHHLYP/6-31G*
+#
+[input]
+system=thymine.xyz
+runtype=optimize
+method=tdhf
+functional=bhhlyp
+basis=6-31g(d)
+
+[guess]
+save_mol=true
+
+[scf]
+type=rohf
+multiplicity=3
+
+[optimize]
+istate=1
+maxit=100
+
+[tdhf]
+type=mrsf
+nstate=5
+

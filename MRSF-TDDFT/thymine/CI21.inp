@@ -1,0 +1,27 @@
+#
+# Minimum Energy Conical Intersection Search between S2 and S1 of Thymine
+# Theory: MRSF-TDDFT/BHHLYP/6-31G* 
+#
+[input]
+system=thymine.xyz
+runtype=meci
+method=tdhf
+functional=bhhlyp
+basis=6-31g(d)
+
+[guess]
+save_mol=true
+
+[scf]
+type=rohf
+multiplicity=3
+
+[optimize]
+istate=2
+jstate=3
+maxit=200
+
+[tdhf]
+type=mrsf
+nstate=5
+
